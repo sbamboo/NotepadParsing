@@ -17,7 +17,7 @@ def process_files(input_folder, output_folder, extensions, encoding):
             # Check if the file extension matches one of the specified ones
             if any(file.endswith(ext) for ext in extensions):
                 file_path = os.path.join(root, file)
-                output_file_path = os.path.join(output_folder, file + '.txt')
+                output_file_path = os.path.join(output_folder, file + "_"+os.path.basename(file_path) + '.txt')
 
                 # Open the file in binary mode
                 with open(file_path, 'rb') as f:

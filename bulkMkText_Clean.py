@@ -81,7 +81,7 @@ def process_files(input_folder, output_folder, extensions, encoding):
                 # Generate output filename based on the first 20 characters of the content
                 output_file_name = decoded_data[:50].replace('\n', ' ').replace('\r', '') + '.txt'
                 # Sanitize the filename
-                sanitized_filename = sanitize_filename(output_file_name)
+                sanitized_filename = sanitize_filename(output_file_name+"_"+os.path.basename(file_path))
                 output_file_path = os.path.join(output_folder, sanitized_filename)
 
                 # Save the cleaned content to the output folder

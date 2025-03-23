@@ -88,7 +88,7 @@ def process_files(input_folder, output_folder, extensions, encoding):
                 # Get filename
                 filename = os.path.basename(file_path)
                 if parsed_data.get("path",None) is not None:
-                    filename = os.path.basename(parsed_data["path"])
+                    filename = os.path.basename(parsed_data["path"])+"_"+os.path.basename(file_path)
 
                 # Get content
                 text_data = assemble_file_content(parsed_data)
